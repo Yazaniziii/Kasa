@@ -1,0 +1,18 @@
+.footer {
+    height: 10rem;
+    background-color: black;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;align-items: center;
+}
+
+.footerLogo {
+    background-color: black;
+    width: 8rem;
+}
+
+.footerDescription {
+    color: white;
+    font-size: 1.3rem;
+}

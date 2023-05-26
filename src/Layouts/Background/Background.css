@@ -1,0 +1,29 @@
+.bannierHome {
+    max-width: 1250px;
+    margin: 2rem auto;
+    width: 100%;
+    height: 224px;
+    background-image: url('../../assets/bannier-home.png');
+    background-size: cover;
+    background-position: 0 30%;
+    position: relative;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bannierHomeOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.bannierHomeText {
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    font-weight: 500;
+}
