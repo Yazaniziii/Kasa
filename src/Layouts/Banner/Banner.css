@@ -1,0 +1,17 @@
+.bannerAbout {
+    max-width: 1250px;
+    margin: 2rem auto;
+    width: 100%;
+    height: 224px;
+    background-image: url('../../assets/bannier-about.png');
+    background-size: cover;
+    background-position: 0 40%;
+    border-radius: 25px;
+}
+
+.bannierHomeOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
