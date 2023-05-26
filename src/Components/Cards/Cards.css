@@ -1,11 +1,40 @@
 .main {
-
+    background-color:#E5E5E5;
+    padding: 1.5rem 2rem;
+    max-width: 1250px;
+    margin: auto;
+    border-radius: 20px;
 }
 
 .mainContainer {
-
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
 .mainCards {
-    
+    min-width: 350px;
+    height: 340px;
+    background-color: aqua;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.mainCardsImg {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mainCardsTitle {
+    position: absolute;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0 1rem;
+    bottom: 0;
 }
