@@ -85,7 +85,7 @@
 
 
 .accordion {
-    max-width: 1300px;
+    max-width: 1250px;
     margin: auto;
     padding: 0 2rem;
   }
@@ -116,3 +116,21 @@
     padding: 0 1rem;
   }
   
+  @media (max-width: 1250px) {
+    .accordion {
+        padding: 0 1rem;
+    }
+    .contenBx {
+        margin: 25px 0;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .label {
+        font-size: 1.2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+  }
