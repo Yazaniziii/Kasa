@@ -12,7 +12,7 @@ export default function Navbar() {
         <header className="header">
             <nav>
                 <Link to="/">
-                    <img src={Logo} alt="logo"/>
+                    <img className="logoHeader" src={Logo} alt="logo"/>
                 </Link>
             </nav>
             <nav className="nav">

@@ -1,8 +1,14 @@
-.bannierHome {
-    max-width: 1250px;
-    margin: 2rem auto;
+.bannierContainer {
     width: 100%;
     height: 224px;
+    max-width: 1250px;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+.bannierHome {
+    width: 100%;
+    height: 100%;
     background-image: url('../../assets/bannier-home.png');
     background-size: cover;
     background-position: 0 30%;
@@ -11,7 +17,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .bannierHomeOverlay {
@@ -27,4 +32,23 @@
     color: white;
     font-size: 3rem;
     font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+    .bannierContainer {
+        padding: 0 20px;
+    } 
+}
+
+@media (max-width: 800px) {
+
+    .bannierContainer {
+        width: 100%;
+        height: 150px;
+    }
+
+    .bannierHomeText {
+        font-size: 1.7rem;
+        text-align: center;
+    }
 }

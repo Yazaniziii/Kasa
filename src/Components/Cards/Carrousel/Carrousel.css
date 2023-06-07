@@ -1,0 +1,13 @@
+.carrousel {
+    background-color: aqua;
+    padding: 0 2rem;
+    max-width: 1300px;
+    margin: 2rem auto;
+    width: 100%;
+}
+
+.carrouselContainer {
+    background-color: blue;
+    height: 22rem;
+    border-radius: 20px;
+}

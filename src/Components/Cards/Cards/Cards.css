@@ -21,7 +21,7 @@
     background-color: aqua;
     border-radius: 10px;
     position: relative;
-
+    overflow: hidden;
 }
 
 .mainCardsImg {
@@ -29,6 +29,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.mainCardsImg:hover {
+    transform: scale(1.1);
 }
 
 .mainCardsTitle {
@@ -38,4 +43,24 @@
     font-weight: 500;
     padding: 0 1rem;
     bottom: 0;
+}
+
+@media (max-width: 1200px) {
+    .mainContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .main {
+        background-color: white;
+        padding: 0 1rem;
+    }
+    .mainContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .mainCards {
+        min-width: 100%;
+        height: 280px;
+    }
 }

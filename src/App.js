@@ -24,8 +24,8 @@ function App() {
           <Routes>
             <Route index element={<Home />}/>
             <Route path='/about' element={<About />}/>
+            <Route path='/products/:id' element={<SingleProduct />}/>
             <Route path='/*' element={<PageNotFound />}/>
-            <Route path='/products/:productId' element={<SingleProduct />}/>
           </Routes>
         </Router>
       </div>

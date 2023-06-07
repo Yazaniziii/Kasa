@@ -1,6 +1,7 @@
 import React from "react";
-import Data from '../../Datas/data.json';
-import './Cards.css';
+import Data from "../../../Datas/data.json";
+import { Link } from "react-router-dom";
+import "./Cards.css";
 
 export default function Cards() {
   return (
@@ -8,9 +9,9 @@ export default function Cards() {
       <div className="mainContainer">
         {Data.map((card) => (
           <div className="mainCards" key={card.id}>
-            <a href="#">
-                <img className="mainCardsImg" src={card.cover} alt="Cover" />
-            </a>
+            <Link to={`/products/${card.id}`}>
+              <img className="mainCardsImg" src={card.cover} alt="Cover" />
+            </Link>
             <p className="mainCardsTitle">{card.title}</p>
           </div>
         ))}

@@ -104,7 +104,6 @@
     font-weight: 500;
     cursor: pointer;
     border-radius: 10px;
-    transition: background-color 0.3s ease;
   }
   
   .accordion .contenBx .content {
@@ -112,16 +111,8 @@
     background-color: #f7f7f7;
     color: #ff6060;
     font-size: 1.2rem;
-    height: 0;
     overflow: hidden;
-    transition: height 0.3s ease; /* Remplacez la transition d'opacité par une transition de hauteur */
+    transition: top 1s ease; /* Remplacez la transition d'opacité par une transition de hauteur */
     padding: 0 1rem;
   }
   
-  .label.expanded {
-    background-color: #ff6060;
-  }
-  
-  .accordion .contenBx .content.expanded {
-  height: auto; /* Définissez la hauteur sur "auto" pour afficher le paragraphe */
-}
