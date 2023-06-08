@@ -1,0 +1,141 @@
+.container {
+    max-width: 1000px;
+    margin:auto;
+    border-radius: 3px;
+    margin-bottom: 1.9rem;
+}
+
+.accordion__faq {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.93rem;
+}
+
+.accordion__faq-gg {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+.accordion__faq-heading {
+    background-color: #ff6060;
+    color: #fff;
+    padding: 0.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.accordion-text {
+    color: #ff6060;
+    padding-left: 1rem;
+    font-size: 1.1rem;
+   
+}
+
+.accordion-text p {
+    height: 100%;
+}
+
+.accordion-simple > .active {
+    display: block;
+    margin: 0;
+}
+
+.accordion__faq .inactive {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.accordion-visible {
+    background: #ff6060;
+    width: 100%;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #474d9b;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    border: #ff6060;
+    border-radius: 10px;
+}
+
+.accordion-visible span {
+    padding: 15px 0;
+    font-size: 1.5rem;
+}
+
+.accordion-visible img {
+    width: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+.accordion-visible img.active {
+    transform: rotate(-180deg)
+}
+
+.accordion-visible h2 {
+    font-size: 1.2rem;
+}
+
+.accordion-toggle {
+    background-color: #f7f7f7;
+    overflow: hidden;
+    height: 0px;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition:  
+    opacity 0.3s ease-in-out,
+    height 0.3s 0.3s ease-in-out;
+    color: #ff6060;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.animated {
+    opacity: 1;
+    transition:  
+    height 0.3s ease-in-out,
+    opacity 0.3s 0.3s ease-in-out;
+}
+
+.accordion-toggle p {
+    margin: 0;
+    padding: 15px;
+    pointer-events: none;
+    line-height: 1.3;
+}

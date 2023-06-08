@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import './Carrousel.css';
 
 export default function Carrousel({ pictures }) {
@@ -18,8 +18,8 @@ export default function Carrousel({ pictures }) {
     <div className="carrousel">
       <div className="carrouselContainer">
         <img src={pictures[currentImageIndex]} alt={`Image ${currentImageIndex}`} />
-        <FontAwesomeIcon className="carrousselArrow carrouselArrowLeft" icon={faArrowLeft} onClick={previousSlide} />
-        <FontAwesomeIcon className="carrousselArrow carrouselArrowRight" icon={faArrowRight} onClick={nextSlide} />
+        <FontAwesomeIcon className="carrousselArrow carrouselArrowLeft" icon={faChevronLeft}  onClick={previousSlide} />
+        <FontAwesomeIcon className="carrousselArrow carrouselArrowRight" icon={faChevronRight} onClick={nextSlide} />
       </div>
     </div>
   );
