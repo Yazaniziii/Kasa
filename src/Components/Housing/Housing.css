@@ -1,0 +1,41 @@
+.housingContainer {
+    max-width: 1250px;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.housingInfoTitle {
+    font-size: 2rem;
+    color: #FF6060;
+    margin: 1rem 0 0.3rem 0;
+    font-weight: 500;
+}
+
+.housingInfoLocalisation {
+    color: #FF6060;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.housingUser h3 {
+    color: #FF6060;
+}
+
+.housingUserInfo {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.housingUserInfoImgUser {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.housingUserIcone {
+    display: flex;
+    column-gap: 1rem;
+    list-style: none;
+}

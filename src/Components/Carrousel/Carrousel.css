@@ -1,0 +1,48 @@
+.carrousel {
+    padding: 0 2rem;
+    max-width: 1300px;
+    margin: 2rem auto 0;
+    width: 100%;
+}
+
+.carrouselContainer {
+    height: 25rem;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.carrouselContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carrouselContainer img.next {
+    transform: translateX(100%);
+}
+  
+.carrouselContainer img.previous {
+    transform: translateX(-100%);
+}
+
+.carrousselArrow{
+    color: white;
+    font-size: 5rem;
+    padding: 0 2rem;
+    cursor: pointer;
+    position: absolute;
+}
+
+.carrouselArrowLeft {
+    left: 0;
+}
+
+.carrouselArrowRight {
+    right: 0;
+}
