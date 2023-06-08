@@ -25,7 +25,7 @@ function App() {
             <Route index element={<Home />}/>
             <Route path='/about' element={<About />}/>
             <Route path='/products/:id' element={<SingleProduct />}/>
-            <Route path='/*' element={<PageNotFound />}/>
+            <Route path='*' element={<PageNotFound />}/>
           </Routes>
         </Router>
       </div>

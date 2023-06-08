@@ -31,7 +31,7 @@
     transform: translateX(-100%);
 }
 
-.carrousselArrow{
+.carrousselArrow {
     color: white;
     font-size: 5rem;
     padding: 0 2rem;
@@ -45,4 +45,20 @@
 
 .carrouselArrowRight {
     right: 0;
+}
+
+@media (max-width: 1250px) {
+
+    .carrousel {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .carrouselContainer {
+        height: 21rem;
+    }
+    .carrousselArrow {
+        font-size: 3rem;
+    }
 }
