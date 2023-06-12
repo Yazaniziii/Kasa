@@ -47,6 +47,17 @@
     right: 0;
 }
 
+.slideNumber {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px;
+  }
+
 @media (max-width: 1250px) {
 
     .carrousel {

@@ -1,58 +1,63 @@
-import React, {useState} from 'react'
-import "./Accordion.css"
-import Chevron from '../../assets/chevron.svg'
+import React, { useState, useEffect, useRef } from 'react';
+import './Accordion.css';
+import Chevron from '../../assets/chevron.svg';
 
-const dataCollection = [
+const dataAccordion = [
   {
-    "title": "Fiabilité",
-    "content": "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
+    title: 'Fiabilité',
+    content: 'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.',
   },
   {
-    "title": "Respect",
-    "content": "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."
+    title: 'Respect',
+    content: 'La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.',
   },
   {
-      "title": "Service",
-      "content": "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."
+    title: 'Service',
+    content: "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.",
   },
   {
-      "title": "Responsabilité",
-      "content": "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
-  }
-]
+    title: 'Responsabilité',
+    content: "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
+  },
+];
 
 export default function Accordion() {
+  const [accordions, setAccordions] = useState([]);
 
-  const [accordion, setActiveAccordion] = useState(-1);
+  useEffect(() => {
+    setAccordions(
+      dataAccordion.map((item) => ({
+        ...item,
+        toggle: false,
+      }))
+    );
+  }, []);
 
-  function toogleAccordion(index) {
-    if(index === accordion){
-      setActiveAccordion(-1)
-      return
-    }
-    setActiveAccordion(index)
-  }
+  const toggleState = (index) => {
+    setAccordions((prevState) =>
+      prevState.map((item, i) => ({
+        ...item,
+        toggle: i === index ? !item.toggle : item.toggle,
+      }))
+    );
+  };
 
-    return (
-
-        <section className='container'>
-          <div className="accordion__faq">
-            {dataCollection.map((item, index) => (
-              <div className='accordion__faq-gg' key={index} onClick={() => toogleAccordion(index)}>
-                <div className='accordion__faq-heading'>
-                  <h3 className={accordion === index ? "active" : ""} > {item.title} </h3>
-                  {accordion === index ? (<><img src={Chevron} alt="" /></>) : (<><img src={Chevron} alt="" /></>)}
-                </div>
-                  
-                <div className='accordion-text'>
-                  <p className={accordion === index ? "active" : "inactive"}>
-                    {item.content}
-                  </p>
-                </div>
-              </div>
-            ))}
+  return (
+    <div className="accordion">
+      {accordions.map((item, index) => (
+        <div key={index}>
+          <button onClick={() => toggleState(index)} className="accordion-visible">
+            <span>{item.title}</span>
+            <img className={item.toggle ? 'active' : ''} src={Chevron} alt="Chevron" />
+          </button>
+          <div
+            className={`accordion-toggle ${item.toggle ? 'animated' : ''}`}
+            style={{ height: item.toggle ? 'auto' : '0px' }}
+          >
+            <p aria-hidden={item.toggle ? 'true' : 'false'}>{item.content}</p>
           </div>
-      </section>
-    
-    )
+        </div>
+      ))}
+    </div>
+  );
 }

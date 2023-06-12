@@ -18,6 +18,7 @@ export default function Carrousel({ pictures }) {
     <div className="carrousel">
       <div className="carrouselContainer">
         <img src={pictures[currentImageIndex]} alt={`Image ${currentImageIndex}`} />
+        <div className="slideNumber">{currentImageIndex + 1} / {pictures.length}</div>
         <FontAwesomeIcon className="carrousselArrow carrouselArrowLeft" icon={faChevronLeft}  onClick={previousSlide} />
         <FontAwesomeIcon className="carrousselArrow carrouselArrowRight" icon={faChevronRight} onClick={nextSlide} />
       </div>

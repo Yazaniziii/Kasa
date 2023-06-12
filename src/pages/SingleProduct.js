@@ -5,6 +5,7 @@ import Footer from "../Layouts/Footer/Footer";
 import Navbar from "../Layouts/Navbar/Navbar";
 import Carrousel from "../Components/Carrousel/Carrousel";
 import Housing from "../Components/Housing/Housing";
+import Description from "../Components/Accordion/Description";
 
 export default function SingleProduct() {
   const { id } = useParams(); //Hook qui extrait la valeur du paramètre "id" de l'URL et l'assigne à la constante id.
@@ -19,18 +20,23 @@ export default function SingleProduct() {
   return (
     <div>
       <Navbar />
+      
       <Carrousel pictures={selectedHousing.pictures} /* Prop qui sélectionne les photos du Carrousel dans le tableau du fichier data.json */ />
       
       <Housing
-        title={selectedHousing.title}
-        description={selectedHousing.description}
+        title = {selectedHousing.title}
         hostName = {selectedHousing.host.name}
         hostPicture = {selectedHousing.host.picture}
         rating = {selectedHousing.rating}
         location = {selectedHousing.location}
-        equipments = {selectedHousing.equipments}
         tags = {selectedHousing.tags}
       />
+
+      <Description 
+        description = {selectedHousing.description}
+        equipments = {selectedHousing.equipments}
+      />
+
       <Footer />
     </div>
   );

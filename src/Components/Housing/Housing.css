@@ -44,7 +44,6 @@
 .housingUserInfo {
     display: flex;
     column-gap: 1rem;
-    text-align: right;
 }
 
 .housingUserInfoImgUser {
@@ -66,6 +65,7 @@
     display: flex;
     column-gap: 1rem;
     list-style: none;
+    margin: 0;
 }
 
 @media (max-width: 800px) {
