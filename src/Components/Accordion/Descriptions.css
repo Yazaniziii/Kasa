@@ -1,32 +1,14 @@
 .containerDescription {
     display: flex;
     max-width: 1250px;
-    margin: auto;
-    justify-content: space-between;
     column-gap: 2rem;
+    margin: auto;
+    margin-bottom: 2rem;
 }
 
 .description {
     flex: 1;
     cursor: pointer;
-}
-
-.descriptionTitle {
-    background-color: #FF6060;
-    color: white;
-    border-radius: 12px;
-}
-
-.descriptionTitle h3 {
-    padding: 1rem;
-}
-
-.descriptionEquipments, .descriptionP {
-    background-color: #f7f7f7;
-    color: #FF6060;
-    padding: 0.5rem 1rem;
-    font-size: 1.1rem;
-    border-radius: 12px;
 }
 
 .descriptionEquipments {
