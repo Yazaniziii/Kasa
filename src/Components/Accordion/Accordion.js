@@ -25,10 +25,11 @@ export default function Accordion() {
   const [accordions, setAccordions] = useState([]);
 
   useEffect(() => {
+    // Initialisation des Collapase avec les données de dataAccordion
     setAccordions(
       dataAccordion.map((item) => ({
         ...item,
-        toggle: false,
+        toggle: false, // Ajout d'une propriété "toggle" pour gérer l'état d'ouverture/fermeture de chaque collapse
       }))
     );
   }, []);
@@ -37,22 +38,25 @@ export default function Accordion() {
     setAccordions((prevState) =>
       prevState.map((item, i) => ({
         ...item,
-        toggle: i === index ? !item.toggle : item.toggle,
+        toggle: i === index ? !item.toggle : item.toggle, // Inversion de l'état "toggle" de l'accordéon cliqué, les autres restent inchangés
       }))
     );
   };
 
   return (
     <div className="accordion">
+      {/* Boucle sur chaque accordéon dans le state "accordions" */}
       {accordions.map((item, index) => (
         <div key={index}>
+          {/* Bouton pour basculer l'état de l'accordéon */}
           <button onClick={() => toggleState(index)} className="accordion-visible">
             <span>{item.title}</span>
             <img className={item.toggle ? 'active' : ''} src={Chevron} alt="Chevron" />
           </button>
+          {/* Contenu de l'accordéon */}
           <div
             className={`accordion-toggle ${item.toggle ? 'animated' : ''}`}
-            style={{ height: item.toggle ? 'auto' : '0px' }}
+            style={{ height: item.toggle ? 'auto' : '0px' }} // La hauteur est définie en fonction de l'état "toggle"
           >
             <p aria-hidden={item.toggle ? 'true' : 'false'}>{item.content}</p>
           </div>

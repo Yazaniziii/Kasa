@@ -66,8 +66,9 @@
 }
 
 @media (max-width: 800px) {
+
     .carrouselContainer {
-        height: 21rem;
+        height: 18rem;
     }
     .carrousselArrow {
         font-size: 3rem;
